@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"> -->
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.header {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header a{
+    color: rgb(255, 255, 255);
+    font-family: "Balsamiq Sans", sans-serif;
+}
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    /* font-family: 'Bai Jamjuree', sans-serif; */
+}
+
+.navbar a:hover, .navbar a.active {
+    color: rgb(230, 245, 12);
+    border-bottom: 3px solid rgb(230, 245, 12);}
+
+.icons .item-bar {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .icons .item-bar {
+        display: block;
+    }
+}
+
+/* About Section */
+.about-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Team Section */
+.team-section {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Social Icons Section */
+.social-icon {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-icon a {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.social-icon a:hover {
+    color: #f9a825;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="Home">
+        <header class="header">
+            <a href="/" class="logo">Ahed</a>
+            <nav class="navbar">
+                <a href="/" class="active">Home</a>
+                <a href="/about">About</a>
+                <a href="/">Post</a>
+                <a href="/contact">Contact</a>
+            </nav>
+            <div class="icons">
+                <div id="menu-btn" class="fa fa-bars item-bar"></div>
+            </div>
+        </header>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>At Ahed, we are passionate about [your industry/service]. Our goal is to provide exceptional value through innovation and dedication to our clients. Our team is composed of highly experienced professionals who work tirelessly to meet and exceed expectations. We believe in transparency, integrity, and fostering strong relationships with our partners and clients.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="/static/images/team-member1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/team-member2.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Chief Marketing Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/team-member3.jpg" alt="Michael Brown">
+                    <h3>Michael Brown</h3>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Icons Section -->
+    <section class="icons">
+        <div class="social-icon">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="content3">
+            <p>&copy; 2024 Ahed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toggle Menu Script -->
+    <script>
+        let navbar = document.querySelector(".header .navbar");
+
+        // Toggle menu/navbar
+        document.querySelector("#menu-btn").onclick = () => {
+            navbar.classList.toggle("active");
+        };
+    </script>
+
+</body>
+</html>

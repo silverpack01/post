@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'contact.css') }}">
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        #Edit{
+            position: relative;
+            margin-top: 8rem;
+        }
+        #contact-box .form-group label{
+            font-size: 2rem;
+            font-family: "Balsamiq Sans", sans-serif;
+        }
+        .h-primary{
+            font-family: "Balsamiq Sans", sans-serif;
+            font-weight: 500;
+        }
+        .primary{
+            text-align: center;
+        }
+        #contact-box input, #contact-box textarea {
+            width: 100%;
+            border-bottom: 2px solid black;
+            font-size: 1.5rem;
+            padding-left: 4rem;
+            margin: 1rem 0rem;
+            border-radius: 0rem;
+        }
+        button{
+            font-size: 1.6rem;
+            text-align: center;
+            justify-content: center;
+            padding: 1rem 1rem;
+            background-color: rgb(56, 179, 232);
+            cursor: pointer;
+            margin-bottom: 5rem;
+        }
+        button:hover{
+            transition: 0.5s ease;
+            transform: scale(1.1);
+        }
+        a button{
+            font-family: "Balsamiq Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <header class="header">
+            <a href="/" class="logo">Ahed</a>
+            <nav class="navbar">
+                <a href="/" class="active">Home</a>
+                <a href="/">Post</a>
+                <a href="#">About</a>
+                <!-- <a href="dashboard.html">dashboard</a> -->
+            </nav>
+            <div class="icons">
+                <div id="menu-btn" class="fa fa-bars item-bar"></div>
+            </div>
+        </header>
+    </div>
+
+    <section id="Edit">
+        <h1 class="h-primary center">Add/Edit Blog</h1>
+        <div class="primary">
+            <a href="/dashboard"><button>dashboard</button></a>
+            <a href="/logout"><button>Logout</button></a>
+        </div>
+        <div id="contact-box">
+            <form action="/edit/{{post.sno}}" method="post">
+                <div class="form-group">
+                    <label for="name">Title:</label>
+                    <input type="text" name="title" id="name" placeholder="Enter Title" value="{{post.title}}">
+                </div>
+                <div class="form-group">
+                    <label for="Tagline">Tagline: </label>
+                    <input type="text" name="tline" id="Tagline" placeholder="Enter Tagline" value="{{post.sub_heading}}">
+                </div>
+                <div class="form-group">
+                    <label for="slug">Slug:</label>
+                    <input type="text" name="slug" id="slug" placeholder="Enter Slug" value="{{post.slug}}">
+                </div>
+                <div class="form-group">
+                    <label for="content">Content: </label>
+                    <input type="text" name="content" id="content" cols="30" rows="10" placeholder="Your message here" value="{{post.content}}">
+                </div>
+                <div class="form-group button">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="content3">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- 
+    <script>
+        let navbar = document.querySelector(".header .navbar");
+
+        // Toggle menu/navbar
+        document.querySelector("#menu-btn").onclick = () => {
+            navbar.classList.toggle("active");
+            login.classList.remove("active");
+        };
+    </script> -->
+</body>
+</html>

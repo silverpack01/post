@@ -1,0 +1,320 @@
+/* body reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    color: #333;
+    line-height: 1.6;
+    background-color: #F2F2F2;
+}
+
+/* navugation section */
+
+header{
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* display: none; */
+}
+header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-left: 1rem;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+header a{
+    color: rgb(255, 255, 255);
+    font-family: "Balsamiq Sans", sans-serif;
+}
+.navbar nav a{
+    margin: 0px 25px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav a:hover,
+nav a.active{
+    color: rgb(230, 245, 12);
+    border-bottom: 3px solid rgb(230, 245, 12);
+}
+.icons{
+    margin: 0rem 0rem;
+    padding: 0rem 0rem;
+    font-size: 1.8rem;
+    color: rgb(165,0,0);
+}
+.icons .item-bar{
+    display: none;
+}
+
+/* content1 section */
+.content1{
+    position: relative;
+}
+.content1 .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+    padding: 0rem 10rem;
+}
+.content1 .text p{
+    /* border: 2px solid black; */
+    font-family: "Balsamiq Sans", sans-serif;
+    width: 45%;
+}
+.content1 .text h1{
+    font-family: "Balsamiq Sans", sans-serif;    
+    font-size: 5rem;
+    font-weight: 500;
+}
+.content1 .text p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.content1::before{
+    content: "";
+    position: absolute;
+    background-image: url("pencils-762555_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.98;
+}
+/* post section */
+section .content2{
+    font-size: 1.5rem;
+    /* text-align: center; */
+    padding: 3rem 5%;
+}
+.content2 .posts a{
+    color: #333333;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+}
+.content2 .posts a:hover {
+    text-decoration: underline;
+}
+.content2 .posts .title h1{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;   
+    font-size: 2.5rem;
+    padding-right: 35%;
+}
+section .content2 .topic p{
+    font-size: 1.4rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin-bottom: 2rem;
+}
+.content2 .date{
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: 0.8rem;
+    color: rgb(85, 83, 87);
+    margin-bottom: 0.5rem;
+}
+.posts .line{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.btn a{
+    display: inline-block;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 1rem 1rem;
+    background-color: rgb(0, 151, 178);
+    /* border-radius: 0.8rem; */
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn a:hover{
+    background-color: rgb(0, 151, 178);
+    transform: scale3d(1.03);
+    color: black;
+    box-shadow: 0 0 5px rgb(0, 151, 178);
+}
+.btn .btn-primary{
+    margin-right: 20rem;
+}
+.social-icon{
+    text-align: center;
+}
+.social-icon a{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 1rem 0.5rem 2rem;    
+    transition: 0.2s ease;
+    /* background-color: rgb(255, 255, 255); */
+    color: rgb(0, 0, 0);
+}
+.social-icon a:hover{
+    color: rgb(0, 0, 0);
+    transform: scale(1.3)translate(-5px);
+    background-color: rgb(242, 242, 242);
+    box-shadow: 0 0 20px rgb(189, 189, 189);
+}
+/* footer section */
+footer{
+    background-color: rgb(41, 40, 40);
+    color: aliceblue;
+    padding: 1rem 0rem;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* responsive design */
+
+@media(max-width:900px){
+    .header{
+        padding: 2rem;
+    }
+    .content1 .text p {
+        border: 2px solid black;
+        width: 100%;
+        border-style: none;
+    }
+    .content2{
+        display: flex;
+        flex-direction: column;
+        font-size: 5rem;
+        text-align: center;
+        padding: 1rem 5%;
+    }
+    .content2 .posts .title{
+        text-align: left;
+    }
+    .content2 .topic{
+        text-align: left;
+    }
+    .content2 .date{
+        text-align: left;
+    }
+    .posts .btn a{
+        font-size: 1rem;
+    }
+}
+@media(max-width:750px){
+    #menu-btn{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .header .navbar{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 0.1rem solid rgb(237, 123, 41);
+        clip-path: polygon(0 0,100% 0,0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+    .content1 .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 630px;
+        width: 100%;
+        padding: 0rem 0rem;
+    }
+    .content1 .text p{
+        font-size: 1.3rem;
+        border-style: none;
+    }
+
+    section .content2{
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        padding: 1rem 5%;
+    }
+
+    section .content2 .topic{
+        font-size: 1.3rem;
+        margin-top: 0.7rem;
+        font-family: "Balsamiq Sans", sans-serif;
+        font-weight: 500;
+    }
+    .btn .btn-primary{
+        margin-right: 5rem;
+    }
+}
+@media(max-width:530px){
+    .content1 .text h1{
+        font-size: 4rem;
+    }
+    .content1 .text p{
+        font-size: 1.2rem;
+    }
+    .content2{
+        display: flex;
+        flex-direction: column;
+        font-size: 5rem;
+        text-align: center;
+        padding: 1rem 5%;
+    }
+    .content2 .posts .title{
+        font-size: 1.6rem;
+        text-align: left;
+    }
+    .content2 .topic{
+        font-size: 1.3rem;
+        margin-top: 0.7rem;
+        /* padding-right: 10%; */
+        font-family: "Balsamiq Sans", sans-serif;
+        font-weight: 500;
+        text-align: left;
+    }
+    .content2 .date{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .posts .btn a{
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+

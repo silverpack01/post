@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+body{
+    font-size: 1.8rem;
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background-image: url("telephone-4440525_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#contact-box{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 527px;
+    padding: 2rem;
+    padding-bottom: 10rem;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+#contact-box input{
+    padding: 1rem;
+}
+#contact-box form{
+    width: 35%;
+}
+#contact-box .form-group label{
+    font-size: 2rem;
+    font-family: "Balsamiq Sans", sans-serif;
+}
+.h-primary{
+    padding: 10rem;
+    font-size: 4rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.button button{
+    margin-top: 1rem;
+    display: inline-block;
+    border: 2px solid rgb(16, 217, 231);
+    border-top: none;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    background-color: rgb(56, 179, 232);
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.button button:hover{
+    background-color: rgb(56, 179, 232);
+    transform: scale3d(1.03);
+    color: black;
+    box-shadow: 0 0 25px rgb(56, 179, 232);
+}
+
+@media(max-width:1130px){
+    #contact-box form{
+        width: 50%;
+    }
+}
+@media(max-width:750px){
+    #menu-btn{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .header .navbar{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 0.1rem solid rgb(237, 123, 41);
+        clip-path: polygon(0 0,100% 0,0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    #contact-box form{
+        width: 60%;
+    }
+    #contact-box {
+        justify-content: left;
+    }
+}
+
+@media(max-width:550px){
+    #contact-box form{
+        width: 70%;
+    }
+    #contact-box {
+        justify-content: left;
+    }
+    .h-primary{
+        font-size: 3rem;
+    }
+    .button button{
+        font-size: 1rem;
+    }
+}

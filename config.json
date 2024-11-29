@@ -1,0 +1,15 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/postserver",
+        "prod_uri":"mysql://root:@localhost/postserver",
+        "gmail_username":"ahedali732312@gmail.com",
+        "gmail_password":"alijutt99+",
+        "post_no":"2",
+        "heading":"blogs by ahed",
+        "tagline":"this blogs from by ahed ali",
+        "admin_user":"alpha",
+        "admin_pass":"alijutt99+"
+    }
+}
